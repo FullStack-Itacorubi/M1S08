@@ -5,10 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'app-teste';
-  
-  ngOnInit(): void {
-    
-  }
+export class AppComponent{
+  //Primeiro componente a ser inicializado - normalmente não vem com o implements OnInit
 }

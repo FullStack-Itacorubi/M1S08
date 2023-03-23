@@ -1,33 +1,23 @@
 <h3 class="text-info border-bottom border-info">Cadastro para {{ nome }}</h3>
 <form class="row">
   <div class="col-6 mb-3">
-    <label class="form-label">Nome</label>
-    <input type="text" name="nome" [(ngModel)]="nome" id="nome" class="form-control {{classes}}" appAddBorda/>
-    <span>{{ getNome() }}</span>
+    <!-- Exemplo de um componente com passagem de dados pelo @Input() - titulo="Nome" tipo="text" -->
+    <input-box titulo="Nome" tipo="text" [mensagem]="mensagem"></input-box>
   </div>
   <div class="col-6 mb-3">
-    <label class="form-label">Sobrenome</label>
-    <input type="text" class="form-control" />
+    <input-box titulo="Sobrenome" tipo="text"></input-box>
   </div>
   <div class="col-12 mb-3">
-    <label class="form-label">Email</label>
-    <input type="email" class="form-control" />
+    <input-box titulo="Email" tipo="email"></input-box>
   </div>
   <div class="col-6 mb-3">
-    <label class="form-label">Senha</label>
-    <input type="password" class="form-control" />
+    <input-box titulo="Password" tipo="password"></input-box>
   </div>
   <div class="col-6 mb-3">
-    <label class="form-label">Idade</label>
-    <input type="number" class="form-control" />
+    <input-box titulo="Idade" tipo="number"></input-box>
   </div>
   <div class="col-12 mb-3">
-    <label class="form-label">Mora na região de Santa Catarina?</label>
-    <select class="form-select" aria-label="Default select example">
-      <option selected disabled>Selecione uma opção</option>
-      <option value="sim">Sim</option>
-      <option value="não">Não</option>
-    </select>
+    <select-box></select-box>
   </div>
   <div class="col-12">
     <label class="form-label">Quais tecnologias você já estudou?</label>
@@ -53,6 +43,10 @@
     </div>
   </div>
   <div class="col-12 mt-2">
-    <button (click)="add()" type="submit" class="btn btn-primary">Enviar</button>
+    <!-- Exemplo de um componente com passagem de dados pelo @Output() - (clicou)="resetar()" -->
+    <button-box (clicou)="resetar()" titulo="Limpar campos" class="mr-3"></button-box>
+    <!-- Notem que em um botão ele pode variar o método a ser executado, 
+      porém sua execução ocorre dentro do componente filho -->
+    <button-box (clicou)="enviar()" titulo="Enviar Form"></button-box>
   </div>
 </form>
