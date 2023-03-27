@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from '../services/general.service';
 
 @Component({
   selector: 'formulario',
@@ -9,7 +10,7 @@ export class FormularioComponent implements OnInit {
   nome = 'Seu nome Aqui';
   mensagem = 'Exemplo de mensagem passada por variável pelo @Input.';
 
-  constructor() {}
+  constructor(private generalService: GeneralService) {}
 
   ngOnInit(): void {
     //Aqui será o primeiro método a ser iniciado assim que o componente é carregado
@@ -18,7 +19,9 @@ export class FormularioComponent implements OnInit {
   }
 
   //Método a ser passado para o componente button-box e usado no @Output()
-  enviar() {
+  enviar(event: any) {
+    console.log(event);
+    this.generalService.enviarCadastro(); //Exemplo de uso de um método disponível em um service
     console.log('Enviou');
   }
 

@@ -7,15 +7,17 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { InputBoxComponent } from './components/input-box/input-box.component';
 import { ButtonBoxComponent } from './components/button-box/button-box.component';
 import { SelectBoxComponent } from './components/select-box/select-box.component';
+import { ConcatStringPipe } from './pipes/concat-string.pipe';
 
 
 @NgModule({
-  declarations: [ //Importação somente de componentes e diretivas
+  declarations: [ //Importação somente de componentes, pipes e diretivas
     AppComponent,
     FormularioComponent,
     InputBoxComponent,
     ButtonBoxComponent,
-    SelectBoxComponent
+    SelectBoxComponent,
+    ConcatStringPipe
   ],
   imports: [ //Importação somente de módulos
     BrowserModule,

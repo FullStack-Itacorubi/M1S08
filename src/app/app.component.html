@@ -1,11 +1,50 @@
 <div class="container my-4">
   <div class="row d-flex align-items-center">
     <div class="col-6">
-      <img src="../assets/login.png" class="img-fluid" alt="">
+      <img src="../assets/login.png" class="img-fluid" alt="" />
     </div>
     <div class="col-6 bg-info bg-opacity-25 rounded-2 p-4">
-      <!-- Componente criado pelo comando < ng g c formulario > -->
-      <formulario></formulario>
+      <!-- Componente criado em aula pelo comando < ng g c formulario > -->
+      <!-- <formulario></formulario> -->
+
+      <!-- Exercício do slide Aula 04 - pag 07 -->
+      <!-- <label for="">Soma</label>
+      {{ getSoma() }}
+      <br />
+      <label for="">Subtração</label>
+      {{ getSubtracao() }}
+      <br />
+      <label for="">Divisão</label>
+      {{ getDivisao() }}
+      <br />
+      <label for="">Multiplicação</label>
+      {{ getMultiplicacao() }} -->
+
+      <!-- Para a aula de pipe - Pipes que já existem no angular -->
+
+      <!-- pipe date - formata a data no padrão passado depois do caractere ':' -->
+      date: {{ "2023/03/24 21:25" | date : "dd/MM/YYYY" }}
+      <br />
+      <br />
+
+      <!-- pipe uppercase - coloca o seu texto entre "" todo em maiúsculo -->
+      uppercase: {{ "oi meu nome é XXXXXXX" | uppercase }}
+      <br />
+      <br />
+
+      <!-- pipe lowercase - coloca o seu texto entre "" todo em minúsculo -->
+      lowercase: {{ "oi meu NOME é xxxxxxx" | lowercase }}
+      <br />
+      <br />
+
+      <!-- pipe json - permite vizualisar um objeto json por extenso, observe os dois casos abaixo -->
+      json: {{ jsonObj }}<br />
+      {{ jsonObj | json }}
+      <br />
+      <br />
+
+      <!-- pipe concatString - criado em aula para concatenar duas strings -->
+      concatString: {{ "Seja bem-vindo(a) " | concatString : jsonObj.nome }}
     </div>
   </div>
 </div>

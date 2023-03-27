@@ -47,6 +47,6 @@
     <button-box (clicou)="resetar()" titulo="Limpar campos" class="mr-3"></button-box>
     <!-- Notem que em um botão ele pode variar o método a ser executado, 
       porém sua execução ocorre dentro do componente filho -->
-    <button-box (clicou)="enviar()" titulo="Enviar Form"></button-box>
+    <button-box (clicou)="enviar($event)" titulo="Enviar Form"></button-box>
   </div>
 </form>
